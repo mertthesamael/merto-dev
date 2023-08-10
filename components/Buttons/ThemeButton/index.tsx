@@ -7,10 +7,13 @@ interface ThemeButtonProps {
 
 const ThemeButton: FC<ThemeButtonProps> = ({  }) => {
   
-  if(!localStorage.getItem('theme')){
-    localStorage.setItem('theme','dark')
-    document.documentElement.classList.add('dark')
-
+  if (typeof window !== 'undefined') {
+    // Perform localStorage action
+    if(!localStorage.getItem('theme')){
+      localStorage.setItem('theme','dark')
+      document.documentElement.classList.add('dark')
+  
+    }
   }
   const themeHandler = () => {
     if(localStorage.theme==='dark'){

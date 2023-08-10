@@ -11,7 +11,7 @@ interface InfoSectionProps {
 
 const InfoSection: FC<InfoSectionProps> = ({  }) => {
   return (
-    <section className="w-full flex justify-center">
+    <section className="w-full flex justify-center mx-8">
         <div className="w-full max-w-screen-lg  flex flex-col gap-10 py-4">
           <div>
             <h1 className="text-4xl font-urbanist text-black dark:text-white">👋 Hey there, this is <span className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent font-black font-söhne">Mert Enercan</span></h1>
