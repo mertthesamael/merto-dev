@@ -6,7 +6,6 @@ export async function GET() {
     
     try{
         const projects = await prisma.projects.findMany();
-        console.log(projects + ' as')
             return NextResponse.json({projects})
     }catch(err){
         console.log(err)

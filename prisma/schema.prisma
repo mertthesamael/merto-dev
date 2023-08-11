@@ -18,4 +18,5 @@ model Projects {
   productLink String
   repoLink String
   type String
+  description String
 }
