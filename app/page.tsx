@@ -1,14 +1,12 @@
 import InfoSection from '@/containers/info-section'
 import ProjectsSection from '@/containers/projects-section'
-import Image from 'next/image'
-import {useTranslations} from 'next-intl';
-
-export default function Home() {
-  const t = useTranslations('Index');
+import {getTranslator} from 'next-intl/server';
+export default async function Home({params: {locale}}:{params:any}) {
+  const t = await getTranslator(locale, 'Index');
 
   return (
     <main className="flex my-20 flex-col items-center gap-14">
-      <InfoSection />
+      <InfoSection info={t.raw('info')} welcome={t('welcome')}/>
       <ProjectsSection title={t('projects')} />
     </main>
   )
