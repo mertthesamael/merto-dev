@@ -7,7 +7,7 @@ export default function Home() {
   const t = useTranslations('Index');
 
   return (
-    <main className="flex my-20 flex-col items-center gap-14">
+    <main className="flex my-10 md:my-20 flex-col items-center gap-14">
       <InfoSection />
       <ProjectsSection title={t('projects')} />
     </main>

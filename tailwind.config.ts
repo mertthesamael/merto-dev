@@ -5,7 +5,9 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './containers/**/*.{js,ts,jsx,tsx,mdx}'
+    './containers/**/*.{js,ts,jsx,tsx,mdx}',
+    './messages/**/*.{js,ts,jsx,tsx,mdx,json}'
+
   ],
   darkMode:'class',
   theme: {

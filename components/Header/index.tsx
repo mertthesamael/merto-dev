@@ -5,10 +5,10 @@ import ThemeButton from '../Buttons/ThemeButton';
 import DonateButton from '../Buttons/DonateButton';
 
 interface HeaderProps {
-  
+  lang:string
 }
 
-const Header: FC<HeaderProps> = ({  }) => {
+const Header: FC<HeaderProps> = ({ lang }) => {
   return (
     <header className="w-full h-20 py-4 flex justify-center">
         <div className='w-full max-w-screen-lg h-full flex items-center justify-between mx-8'>
@@ -19,7 +19,7 @@ const Header: FC<HeaderProps> = ({  }) => {
                 <div className='md:flex gap-4 items-center hidden'>
                   <ThemeButton />
                  <DonateButton />
-                 <LanguageSwitch />
+                 <LanguageSwitch lang={lang}/>
                 </div>
             </div>
         </div>
