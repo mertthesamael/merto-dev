@@ -9,6 +9,7 @@ export async function GET() {
         console.log(projects + ' as')
             return NextResponse.json({projects})
     }catch(err){
+        console.log(err)
         return NextResponse.json({ error: 'Internal Server Error', msg:err }, { status: 500 })
     }finally{
         await prisma.$disconnect();

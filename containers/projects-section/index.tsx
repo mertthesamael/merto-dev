@@ -6,11 +6,18 @@ interface ProjectsSectionProps {
 }
 const getProjects = async() => {
   const endpoint = process.env.URL_ROOT ?? "http://localhost:3000" ;
-  const data = await axios(endpoint+'/api/projects')
-  return data.data
+  try{
+
+    const data = await axios(endpoint+'/api/projects')
+    return data.data
+  }catch(err){
+    return err
+  }
 }
 const ProjectsSection: FC<ProjectsSectionProps> = async({  }) => {
   const data = await getProjects()
+  console.log(data)
+
  
   return (
     <section className='w-full flex justify-center'>
@@ -20,7 +27,6 @@ const ProjectsSection: FC<ProjectsSectionProps> = async({  }) => {
         </div>
         <div className="-mx-4">
             <Card></Card>
-            {<h1 className='text-white'>{data.projects[0].name}</h1>}
         </div>
      </div>
     </section>
