@@ -16,7 +16,7 @@ const getProjects = async() => {
 }
 const ProjectsSection: FC<ProjectsSectionProps> = async({  }) => {
   const data = await getProjects()
-  console.log(data)
+  
 
  
   return (
@@ -27,6 +27,7 @@ const ProjectsSection: FC<ProjectsSectionProps> = async({  }) => {
         </div>
         <div className="-mx-4">
             <Card></Card>
+            <h1>{data.projects[0].name}</h1>
         </div>
      </div>
     </section>
