@@ -5,12 +5,9 @@ const withNextIntl = require('next-intl/plugin')(
   );
    
   module.exports = withNextIntl({
+      images:{
+          domains:['user-images.githubusercontent.com']
+      }
     // Other Next.js configuration ...
   });
-const nextConfig = {
-    images:{
-        domains:['user-images.githubusercontent.com']
-    }
-}
 
-module.exports = withNextIntl(nextConfig)

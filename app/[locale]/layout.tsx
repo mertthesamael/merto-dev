@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'Fullstack Web Developer | NextJS | Mert Enercan',
 }
 
-export default async function LocaleLayout({
+export default function LocaleLayout({
   children,params
 }: {
   children: React.ReactNode,
