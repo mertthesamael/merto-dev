@@ -27,7 +27,6 @@ const ProjectsSection: FC<ProjectsSectionProps> = async({ title }) => {
         </div>
         <div className="-mx-4 flex flex-wrap justify-center gap-4 md:justify-between">
           {data.map((project) => <Card key={project.name} project={project}/>)}
-      
         </div>
      </div>
     </section>

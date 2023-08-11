@@ -2,6 +2,7 @@
     "Index": {
       "welcome": "Hey there, this is ",
       "projects":"Projects",
-      "info":"A <span class='text-black dark:text-white'>frontend web developer</span> that using <span class='text-black dark:text-white'>NextJS</span> and <span class='text-black dark:text-white'>TypeScript.</span> You can reach me via socials below or <a href={'mailto:mertenercan@gmail.com'} class='text-black dark:text-white underline'>mertenercan@gmail.com</a>"
+      "info":"A <span class='text-black dark:text-white'>frontend web developer</span> that using <span class='text-black dark:text-white'>NextJS</span> and <span class='text-black dark:text-white'>TypeScript.</span> You can reach me via socials below or <a href={'mailto:mertenercan@gmail.com'} class='text-black dark:text-white underline'>mertenercan@gmail.com</a>",
+      "donate":"If you want to donate me for no reason, here is my wallet address."
     }
   }

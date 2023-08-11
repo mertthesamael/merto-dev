@@ -1,3 +1,4 @@
+import DonateSection from '@/containers/donate-section';
 import InfoSection from '@/containers/info-section'
 import ProjectsSection from '@/containers/projects-section'
 
@@ -11,6 +12,7 @@ export default async function Home({params: {locale}}:{params:any}) {
     <main className="flex my-10 md:my-20 flex-col items-center gap-14">
       <InfoSection welcome={t('welcome')} info={t.raw('info')} />
       <ProjectsSection title={t('projects')} />
+      <DonateSection text={t('donate')}/>
     </main>
   )
 }

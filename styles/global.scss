@@ -22,7 +22,9 @@ body {
   color: rgb(var(--foreground-rgb));
   
 }
-
+html {
+  scroll-behavior: smooth!important;
+}
 *{
 }
 ::-moz-selection { /* Code for Firefox */
