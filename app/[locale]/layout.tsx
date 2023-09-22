@@ -1,10 +1,11 @@
 import Header from '@/components/Header'
-import '@/styles/global.scss'
+import '@/styles/global.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { poppins, söhne, urbanist } from '@/libs/fonts'
 import {useLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
+import { ThemeProvider } from './theme-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,8 +31,13 @@ export default function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={`${söhne.variable} ${urbanist.variable} ${poppins.variable} bg-slate-100 dark:bg-black transition-all duration-200`}>
+        <ThemeProvider  attribute="class"
+            defaultTheme="system"
+            enableSystem
+           >
         <Header lang={locale}/>
         {children}
+        </ThemeProvider>
       </body>
     </html>
   )

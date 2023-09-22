@@ -18,8 +18,9 @@
   }
 }
 
+
 body {
-  color: rgb(var(--foreground-rgb));
+ color: rgb(var(--foreground-rgb));
   
 }
 html {

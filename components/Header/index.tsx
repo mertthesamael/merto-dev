@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import React, { FC } from 'react'
-import LanguageSwitch from './LanguageSwitch';
-import ThemeButton from '../Buttons/ThemeButton';
-import DonateButton from '../Buttons/DonateButton';
+import HeaderButton from '../Buttons/HeaderButton';
+import { headerButtons } from './constants';
 
 interface HeaderProps {
   lang:string
@@ -17,9 +16,7 @@ const Header: FC<HeaderProps> = ({ lang }) => {
             </div>
             <div className='flex gap-16'>
                 <div className='flex gap-4 items-center '>
-                  <ThemeButton />
-                 <DonateButton />
-                 <LanguageSwitch lang={lang}/>
+                 {headerButtons.map((el, _i) => <HeaderButton key={_i} lang={lang} variant={el.variant} icon={el.icon}/>)}
                 </div>
             </div>
         </div>

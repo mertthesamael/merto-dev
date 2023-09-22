@@ -15,19 +15,24 @@ export const söhne = localFont({
         weight: '600'
       },
     ],
-    variable: '--söhne'
+    variable: '--söhne',
+    display:'swap',
 })
 
 
 export const urbanist = Urbanist({
   subsets:['latin'],
   weight:['300','400','600','500','700'],
-  variable: '--urbanist'
+  variable: '--urbanist',
+  display:'swap',
+
 })
 
 export const poppins = Poppins({
   subsets:['latin'],
   weight:['300','400','600','500','700','800','900'],
-  variable: '--poppins'
+  variable: '--poppins',
+  display:'swap',
+
 })
 
