@@ -26,7 +26,7 @@ const Card: FC<CardProps> = ({ project }) => {
         <div>
           <div className="flex gap-4">
             {project.techStack.map((el, _i) => (
-              <p className="text-sm font-bold font-urbanist w-max bg-blue-800/60 dark:bg-slate-400/30 px-2 py-1 rounded-sm">
+              <p key={_i} className="text-sm font-bold font-urbanist w-max bg-blue-800/60 dark:bg-slate-400/30 px-2 py-1 rounded-sm">
                 {el}
               </p>
             ))}
