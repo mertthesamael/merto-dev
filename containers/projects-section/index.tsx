@@ -18,7 +18,6 @@ const getProjects = async() => {
 const ProjectsSection: FC<ProjectsSectionProps> = async({ title }) => {
   const data : ProjectType[] = await getProjects()
   
- 
   return (
     <section className='w-full flex justify-center'>
      <div className="w-full max-w-screen-lg flex flex-col gap-5 mx-8">
