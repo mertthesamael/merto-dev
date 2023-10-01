@@ -1,13 +1,11 @@
 import Header from '@/components/Header'
 import '@/styles/global.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { poppins, söhne, urbanist } from '@/libs/fonts'
 import {useLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
 import { ThemeProvider } from './theme-provider'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: 'Mert Enercan',
@@ -39,6 +37,7 @@ export default function LocaleLayout({
         {children}
         </ThemeProvider>
       </body>
+      <Analytics />
     </html>
   )
 }
