@@ -24,7 +24,7 @@ const ProjectsSection: FC<ProjectsSectionProps> = async({ title }) => {
         <div>
             <h1 className="text-5xl text-black dark:text-white font-söhne font-extrabold">{title}</h1>
         </div>
-        <div className="-mx-4 flex flex-wrap justify-center gap-4 md:justify-between">
+        <div style={{gridTemplateColumns:'repeat(auto-fill, minmax(340px, 1fr))'}} className="-mx-4 flex lg:grid flex-wrap justify-center md:gap-[1.12rem] gap-4 md:justify-between">
           {data.map((project) => <Card key={project.name} project={project}/>)}
         </div>
      </div>
