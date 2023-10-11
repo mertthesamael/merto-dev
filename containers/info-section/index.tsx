@@ -17,7 +17,7 @@ const InfoSection: FC<InfoSectionProps> = ({ info,welcome }) => {
             <p className="text-xl md:text-2xl text-gray-400  md:leading-10" dangerouslySetInnerHTML={{__html:info}}></p>
           </div>
           <div className='flex gap-4'>
-            {Socials.map((el, _i) => <Link key={_i} href={el.href} target='_blank'>{el.icon}</Link>)}
+            {Socials.map((el, _i) => <Link key={_i} aria-label='Social Media Link' href={el.href} target='_blank'>{el.icon}</Link>)}
           </div>
         </div>
     </section>

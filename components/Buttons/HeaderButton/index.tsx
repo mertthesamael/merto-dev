@@ -16,6 +16,7 @@ const HeaderButton: FC<HeaderButtonProps> = ({ variant, lang, icon }) => {
   if (variant === "language") {
     return (
       <Link
+        aria-label='Header Navigation'
         href={"/"}
         locale={lang === "en" ? "tr" : "en"}
         className="rounded-full w-11 h-11 flex justify-center p-2 border-2 border-stone-950 cursor-pointer dark:border-white"
@@ -32,7 +33,7 @@ const HeaderButton: FC<HeaderButtonProps> = ({ variant, lang, icon }) => {
     donate:() => router.push('#donate')
   }[variant];
   return (
-    <button onClick={callback} className="rounded-full h-11 w-11  p-2 border-2 border-stone-950 cursor-pointer dark:border-white">
+    <button  onClick={callback} aria-label='Header Button' className="rounded-full h-11 w-11  p-2 border-2 border-stone-950 cursor-pointer dark:border-white">
       {icon}
     </button>
   );
