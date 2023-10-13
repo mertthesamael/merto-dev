@@ -1,3 +1,7 @@
+![merto](https://github.com/mertthesamael/merto-dev/assets/79616834/dd04cf5b-bc3f-453b-9561-d1063791674b)
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
