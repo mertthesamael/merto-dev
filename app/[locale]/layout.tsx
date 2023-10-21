@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: 'Fullstack Web Developer | NextJS | Mert Enercan',
   openGraph: {
     type: 'website',
-    title: 'Mert Enercan',
+    title: 'Mert Enercan 🎃',
     url: 'https://merto.dev',
     description: 'Fullstack Web Developer | NextJS | Mert Enercan',
     images: ['https://user-images.githubusercontent.com/79616834/274821212-dd04cf5b-bc3f-453b-9561-d1063791674b.png'],
@@ -35,7 +35,7 @@ export default function LocaleLayout({
   const isValidLocale = locales.some((cur) => cur === locale);
 
   if (!isValidLocale) notFound();
-  
+
   return (
     <html lang={locale}>
       <body className={`${söhne.variable} ${urbanist.variable} ${poppins.variable} bg-slate-100 dark:bg-black transition-all duration-200`}>
