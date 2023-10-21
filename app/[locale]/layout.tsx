@@ -6,7 +6,7 @@ import { poppins, söhne, urbanist } from '@/libs/fonts'
 
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { ThemeProvider } from './theme-provider'
+import { ThemeProvider } from '../theme-provider'
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     ttl: 604800
   },
 }
+const locales = ['en', 'tr'];
 
 export default function LocaleLayout({
   children, params
@@ -29,12 +30,12 @@ export default function LocaleLayout({
   children: React.ReactNode,
   params: any
 }) {
+
   const locale = useLocale();
-  const locales = ['en', 'tr'];
   const isValidLocale = locales.some((cur) => cur === locale);
 
   if (!isValidLocale) notFound();
-
+  
   return (
     <html lang={locale}>
       <body className={`${söhne.variable} ${urbanist.variable} ${poppins.variable} bg-slate-100 dark:bg-black transition-all duration-200`}>
