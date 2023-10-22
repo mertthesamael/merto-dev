@@ -32,9 +32,9 @@ export default function LocaleLayout({
 }) {
 
   const locale = useLocale();
-  // const isValidLocale = locales.some((cur) => cur === locale);
+  const isValidLocale = locales.some((cur) => cur === locale);
 
-  // if (!isValidLocale) notFound();
+  if (!isValidLocale) notFound();
 
   return (
     <html lang={locale}>
