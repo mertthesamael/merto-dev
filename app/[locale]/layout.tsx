@@ -13,13 +13,7 @@ export const metadata: Metadata = {
   title: 'Mert Enercan 🎃',
   description: 'Fullstack Web Developer | NextJS | Mert Enercan',
   openGraph: {
-    type: 'website',
-    title: 'Mert Enercan 🎃',
-    url: 'https://merto.dev',
-    description: 'Fullstack Web Developer | NextJS | Mert Enercan',
     images: ['https://user-images.githubusercontent.com/79616834/274821212-dd04cf5b-bc3f-453b-9561-d1063791674b.png'],
-    //TTL stands for caching opengarph info. Currently it caches for 604800 sec / 1 week.
-    ttl: 604800
   },
 }
 const locales = ['en', 'tr'];
