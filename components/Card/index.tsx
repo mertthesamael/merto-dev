@@ -24,9 +24,9 @@ const Card: FC<CardProps> = ({ project }) => {
       </div>
       <div className="flex flex-col gap-4 justify-between min-h-40">
         <div>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 min-h-[4.5rem]">
             {project.techStack.map((el, _i) => (
-              <p key={_i} className="text-sm font-bold font-urbanist w-max bg-blue-800/60 dark:bg-slate-400/30 px-2 py-1 rounded-sm">
+              <p key={_i} className="text-sm h-max font-bold font-urbanist w-max bg-blue-800/60 dark:bg-slate-400/30 px-2 py-1 rounded-sm">
                 {el}
               </p>
             ))}
@@ -34,16 +34,16 @@ const Card: FC<CardProps> = ({ project }) => {
           <h2 className="text-xl font-söhne text-black dark:text-white font-bold leading-10">
             {project.name}
           </h2>
-          <p className="text-gray-400 font-poppins line-clamp-2">{project.description}</p>
+          <p className="text-gray-600 dark:text-gray-400 font-poppins line-clamp-2  min-h-[3rem]">{project.description}</p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-end gap-2">
           <Github />
           <Link
             href={project.repoLink}
             target="_blank"
-            className="font-urbanist font-bold text-black dark:text-white text-md"
+            className="transition-all font-urbanist font-bold underline underline-offset-4 text-gray-600 hover:text-black dark:text-white/50 dark:hover:text-white text-md"
           >
-            Go to repo
+            Repo Link
           </Link>
         </div>
       </div>

@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({ lang }) => {
   return (
-    <header className="w-full h-20 py-4 flex justify-center">
+    <header className="w-full transition-all duration-200 fixed bg-slate-100/40 dark:bg-black/30 top-0 backdrop-blur-lg h-[--header-height] py-4 flex justify-center z-20">
         <div className='w-full max-w-screen-lg h-full flex items-center justify-between mx-8'>
             <div>
               <Link href={'/'} className="text-3xl text-black font-poppins font-extrabold hover:text-[#00FF7F]  transition-all duration-300 dark:text-white dark:hover:text-[#00FF7F]">merto</Link>

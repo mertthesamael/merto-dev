@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const locales = ['en', 'tr'];
 
 export default function LocaleLayout({
-  children, params
+  children
 }: {
   children: React.ReactNode,
   params: any

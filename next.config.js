@@ -6,7 +6,16 @@ const withNextIntl = require('next-intl/plugin')(
    
   module.exports = withNextIntl({
       images:{
-          domains:['user-images.githubusercontent.com','camo.githubusercontent.com']
+        remotePatterns: [
+          {
+            protocol: "https",
+            hostname: "user-images.githubusercontent.com"
+          },
+          {
+            protocol: "https",
+            hostname: "camo.githubusercontent.com"
+          },
+        ],
       }
     // Other Next.js configuration ...
   });
