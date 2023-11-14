@@ -1,4 +1,3 @@
-import "next/server"
 import Card from '@/components/Card';
 import { ProjectType } from '@/types/ProjectType';
 import axios from 'axios';
@@ -20,7 +19,6 @@ type ProjectsContainerProps = {
 }
 
 const ProjectsContainer: FC<ProjectsContainerProps> = async({ filter }) => {
-
     const projects: ProjectType[] = await getProjects(filter);
   const projectsArray = [...projects].reverse()
     return (
