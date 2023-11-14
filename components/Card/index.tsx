@@ -15,7 +15,7 @@ const Card: FC<CardProps> = ({ project }) => {
         <Link href={project.productLink} target="_blank">
           <Image
             src={project.img}
-            alt="Card Image"
+            alt="Mert Enercan Project Image"
             fill
             style={{ objectFit: "cover" }}
             className="transition-all hover:scale-105"
