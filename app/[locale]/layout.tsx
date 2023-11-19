@@ -1,6 +1,6 @@
 import Header from '@/components/Header'
 import '@/styles/global.css'
-
+import { GoogleTagManager } from '@next/third-parties/google'
 import type { Metadata } from 'next'
 import { poppins, söhne, urbanist } from '@/libs/fonts'
 
@@ -40,6 +40,7 @@ export default function LocaleLayout({
           <Header lang={locale} />
           {children}
         </ThemeProvider>
+        <GoogleTagManager gtmId='GTM-PTPQ2C7Z'/>
       </body>
       <Analytics />
     </html>
