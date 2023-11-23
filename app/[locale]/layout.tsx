@@ -1,16 +1,16 @@
 import Header from '@/components/Header'
 import '@/styles/global.css'
+import '@/styles/snow.css'
 import { GoogleTagManager } from '@next/third-parties/google'
 import type { Metadata } from 'next'
 import { poppins, söhne, urbanist } from '@/libs/fonts'
-
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from '../theme-provider'
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
-  title: 'Mert Enercan 🎃',
+  title: 'Mert Enercan 🎄',
   description: 'Fullstack Web Developer | NextJS | Mert Enercan',
   openGraph: {
     images: ['https://user-images.githubusercontent.com/79616834/274821212-dd04cf5b-bc3f-453b-9561-d1063791674b.png'],
@@ -37,6 +37,9 @@ export default function LocaleLayout({
           defaultTheme="system"
           enableSystem
         >
+          <div className='snow_wrap'>
+            <div className='snow'/>
+          </div>
           <Header lang={locale} />
           {children}
         </ThemeProvider>
