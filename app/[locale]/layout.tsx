@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import '@/styles/global.css'
-import '@/styles/snow.css'
 import { GoogleTagManager } from '@next/third-parties/google'
 import type { Metadata } from 'next'
 import { poppins, söhne, urbanist } from '@/libs/fonts'
@@ -37,9 +36,6 @@ export default function LocaleLayout({
           defaultTheme="system"
           enableSystem
         >
-          <div className='snow_wrap'>
-            <div className='snow'/>
-          </div>
           <Header lang={locale} />
           {children}
         </ThemeProvider>
