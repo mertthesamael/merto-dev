@@ -1,10 +1,11 @@
+import { CalendarIcon } from "../Icons/Calendar"
 import { DonateIcon } from "../Icons/Donate"
 import { ThemeIcon } from "../Icons/Theme"
 
 
 type THeaderButton = {
     id:number,
-    variant:'theme'|'language'|'donate',
+    variant:'theme'|'language'|'donate'|'calendar',
     icon?:JSX.Element,
 }
 export const headerButtons : THeaderButton[] = [
@@ -14,12 +15,17 @@ export const headerButtons : THeaderButton[] = [
         icon:ThemeIcon(),
     },
     {
-        id:1,
+        id:2,
+        variant:'calendar',
+        icon:CalendarIcon(),
+    },
+    {
+        id:3,
         variant:'donate',
         icon:DonateIcon(),
     },
     {
-        id:1,
+        id:4,
         variant:'language',
     },
 ]

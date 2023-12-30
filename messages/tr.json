@@ -2,7 +2,7 @@
     "Index": {
       "welcome": "Selam, ben ",
     "projects":"Projeler",
-      "info":"<span class='text-black dark:text-white'>NextJS</span> ve <span class='text-black dark:text-white'>TypeScript</span> teknolojilerini kullanan bir <span class='text-black dark:text-white'>frontend web developer'ım.</span> Bana aşağıdaki sosyal adreslerimden veya <a href={'mailto:mertenercan@gmail.com'} class='text-black dark:text-white underline'>mertenercan@gmail.com</a> adresinden ulaşabilirsin.",
+      "info":"<span class='text-black dark:text-white'>NextJS</span> ve <span class='text-black dark:text-white'>TypeScript</span> teknolojilerini kullanan bir <span class='text-black dark:text-white'>yazılım geliştiricisiyim.</span> Bana aşağıdaki sosyal adreslerimden veya <a href={'mailto:mertenercan@gmail.com'} class='text-black dark:text-white underline'>mertenercan@gmail.com</a> adresinden ulaşabilirsin.",
       "donate":"Durduk yere bana para göndermek istersen, buyur cüzdan adresim."
 
     }

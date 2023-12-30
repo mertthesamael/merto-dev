@@ -15,7 +15,7 @@ const Header: FC<HeaderProps> = ({ lang }) => {
               <Link href={'/'} className="text-3xl text-black font-poppins font-extrabold hover:text-[#00FF7F]  transition-all duration-300 dark:text-white dark:hover:text-[#00FF7F]">merto</Link>
             </div>
             <div className='flex gap-16'>
-                <div className='flex gap-4 items-center '>
+                <div className='flex gap-2 md:gap-4 items-center '>
                  {headerButtons.map((el, _i) => <HeaderButton key={_i} lang={lang} variant={el.variant} icon={el.icon}/>)}
                 </div>
             </div>
