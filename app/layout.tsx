@@ -5,7 +5,6 @@ import type { Metadata } from 'next'
 type Props = {
   children: ReactNode;
 };
-export const runtime = 'edge' // 'nodejs' (default) | 'edge'
 export const metadata: Metadata = {
   title: 'Mert Enercan 🎄',
   description: 'Fullstack Web Developer | NextJS | Mert Enercan',
