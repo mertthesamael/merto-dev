@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 }
 const locales = ['en', 'tr'];
 
+export const runtime = 'edge' // 'nodejs' (default) | 'edge'
 export default function LocaleLayout({
   children
 }: {
@@ -28,7 +29,6 @@ export default function LocaleLayout({
   const isValidLocale = locales.some((cur) => cur === locale);
 
   if (!isValidLocale) notFound();
-
   return (
     <html lang={locale}>
       <body className={`${söhne.variable} ${urbanist.variable} ${poppins.variable} bg-slate-100 dark:bg-black transition-all duration-200`}>
