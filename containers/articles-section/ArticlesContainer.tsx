@@ -6,7 +6,7 @@ import axios from 'axios';
 import React, { FC } from 'react'
 
 const getArticles = async () => {
-    const endpoint = "http://localhost:3000";
+    const endpoint = process.env.URL_ROOT ?? "http://localhost:3000";
     try {
       const data = await axios(endpoint + "/api/articles/get-all");
       return data.data;
