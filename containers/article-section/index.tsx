@@ -7,7 +7,7 @@ type ArticleSectionProps = {
     articleID: string
 }
 const getArticle = async (articleID: string) => {
-    const endpoint = "http://localhost:3000";
+    const endpoint = process.env.URL_ROOT ?? "http://localhost:3000";
     try {
         const data = await axios.post(endpoint + "/api/articles/get-single", {
             articleID: articleID
