@@ -7,6 +7,7 @@ import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from '../theme-provider'
 import { Analytics } from '@vercel/analytics/react';
+import DonateSection from '@/containers/donate-section'
 
 export const metadata: Metadata = {
   title: 'Mert Enercan 🎄',
@@ -28,13 +29,11 @@ export default function LocaleLayout({
   const isValidLocale = locales.some((cur) => cur === locale);
 
   if (!isValidLocale) notFound();
-
   return (
     <html lang={locale}>
       <body className={`${söhne.variable} ${urbanist.variable} ${poppins.variable} bg-slate-100 dark:bg-black transition-all duration-200`}>
         <ThemeProvider attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
         >
           <Header lang={locale} />
           {children}

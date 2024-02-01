@@ -24,11 +24,21 @@
   }
 }
 
-
+@layer components{
+  .blog-area{
+    @apply [&_a]:underline underline-offset-2 [&_p]:text-lg font-poppins [&_figure]:w-full [&_figure]:flex [&_figure]:flex-col [&_figure]:items-center [&_figure]:gap-2 [&_h3]:font-bold [&_h3]:text-2xl [&_h3]:my-4 [&_pre]:border [&_pre]:border-white [&_pre]:bg-gray-400/20 [&_pre]:rounded-md [&_pre]:dark:border-gray-600 [&_blockquote]:italic [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-2 [&_ul]:list-disc	  text-black dark:text-white
+  }
+}
 body {
  color: rgb(var(--foreground-rgb));
  position: relative;
   
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+  padding: 1rem;
 }
 html {
   scroll-behavior: smooth!important;

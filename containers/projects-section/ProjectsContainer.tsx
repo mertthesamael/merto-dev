@@ -1,4 +1,4 @@
-import Card from '@/components/Card';
+import Card from '@/components/Card/ProjectCard';
 import { ProjectType } from '@/types/ProjectType';
 import axios from 'axios';
 import React, { FC } from 'react'
