@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic"
 export async function GET() {
     try {
         const articles = await fetch("https://v1.nocodeapi.com/merto/medium/ovXkyrxIBtWcjGkC", {
