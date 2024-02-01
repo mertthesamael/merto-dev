@@ -7,7 +7,6 @@ export const Github = () => {
         <svg width="32px" height="32px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
     
     <title>github [#142]</title>
-    <desc>Created with Sketch.</desc>
     <defs>
 
 </defs>
