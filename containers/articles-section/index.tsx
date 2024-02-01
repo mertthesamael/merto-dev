@@ -1,5 +1,4 @@
 import React, { FC, Suspense } from "react";
-import MultiButtonFilter from "@/components/MultiButtonFilter";
 import ArticlesContainer from "./ArticlesContainer";
 
 
@@ -26,7 +25,7 @@ const ArticlesSection: FC<ArticlesSectionProps> = ({ title }) => {
           }}
           className="-mx-4 flex lg:grid flex-wrap justify-center md:gap-[1.5rem] gap-4 md:justify-between">
           <Suspense fallback={Array(6).fill(0).map((el, _i) => (
-            <div key={_i} className="animate-pulse w-full md:w-[420px] h-[10rem]  rounded-lg bg-black/10 dark:bg-white/10" />
+            <div key={_i} className="animate-pulse w-full md:w-full h-[10rem]  rounded-lg bg-black/10 dark:bg-white/10" />
           ))}>
             <ArticlesContainer />
           </Suspense>
