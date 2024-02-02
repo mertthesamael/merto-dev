@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     images: ['https://user-images.githubusercontent.com/79616834/274821212-dd04cf5b-bc3f-453b-9561-d1063791674b.png'],
   },
 }
+export const runtime = 'edge'
 // Since we have a `not-found.tsx` page on the root, a layout file
 // is required, even if it's just passing children through.
 export default function RootLayout({ children }: Props) {
