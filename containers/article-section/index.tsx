@@ -1,5 +1,4 @@
 import { Articles } from '@prisma/client';
-import axios from 'axios';
 import Link from 'next/link';
 import React, { FC } from 'react'
 
@@ -9,10 +8,17 @@ type ArticleSectionProps = {
 const getArticle = async (articleID: string) => {
     const endpoint = process.env.URL_ROOT ?? "http://localhost:3000";
     try {
-        const data = await axios.post(endpoint + "/api/articles/get-single", {
-            articleID: articleID
+        const request = await fetch(endpoint + "/api/articles/get-single", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                articleID: articleID
+            })
         });
-        return data.data;
+
+        return request.json();
     } catch (err) {
         return err;
     }
@@ -40,7 +46,7 @@ const ArticleSection: FC<ArticleSectionProps> = async ({ articleID }) => {
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </section>
     )
