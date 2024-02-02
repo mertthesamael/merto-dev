@@ -1,5 +1,5 @@
 import ArticleCard from '@/components/Card/ArticleCard';
-import { ArticleType } from '@/types/ArticleType';
+import { Articles } from '@prisma/client';
 import React, { FC } from 'react'
 
 const getArticles = async () => {
@@ -16,11 +16,11 @@ type ArticlesContainerProps = {
 }
 
 const ArticlesContainer: FC<ArticlesContainerProps> = async({  }) => {
-    const articles : ArticleType[] = await getArticles();
+    const articles : Articles[] = await getArticles();
     return (
         <>
            {articles.map((article, _i) => (
-            <ArticleCard key={article.created} article={article}/>
+            <ArticleCard key={article.id} article={article}/>
           ))} 
         </>
       )
