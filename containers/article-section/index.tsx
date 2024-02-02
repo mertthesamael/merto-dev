@@ -1,4 +1,4 @@
-import { ArticleType } from '@/types/ArticleType';
+import { Articles } from '@prisma/client';
 import axios from 'axios';
 import Link from 'next/link';
 import React, { FC } from 'react'
@@ -18,7 +18,7 @@ const getArticle = async (articleID: string) => {
     }
 };
 const ArticleSection: FC<ArticleSectionProps> = async ({ articleID }) => {
-    const targetArticle: ArticleType = await getArticle(articleID)
+    const targetArticle: Articles = await getArticle(articleID)
 
     return (
         <section className="w-full flex justify-center">
@@ -27,7 +27,7 @@ const ArticleSection: FC<ArticleSectionProps> = async ({ articleID }) => {
                     <h2 className='text-3xl font-poppins font-bold text-black dark:text-white'>{targetArticle.title}</h2>
                     <div className='flex flex-col-reverse gap-6 md:flex-row justify-between'>
                         <div className=' flex items-start gap-4 flex-wrap'>
-                            {targetArticle.category.map((el, _i) => (
+                            {targetArticle.category.split(',').map((el, _i) => (
                                 <p key={_i} className="text-sm h-max font-bold font-urbanist w-max bg-blue-800/60 dark:bg-slate-400/30 px-2 py-1 rounded-sm">
                                     {el}
                                 </p>
@@ -40,7 +40,7 @@ const ArticleSection: FC<ArticleSectionProps> = async ({ articleID }) => {
                         </div>
                     </div>
                 </div>
-                <div className='w-full h-full flex flex-col blog-area gap-6' dangerouslySetInnerHTML={{ __html: targetArticle.content }} />
+               
             </div>
         </section>
     )

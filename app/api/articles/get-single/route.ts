@@ -1,18 +1,15 @@
-import { ArticleType } from "@/types/ArticleType";
+import { prisma } from "@/libs/db";
 import { NextRequest } from "next/server";
 export const dynamic = "force-dynamic"
 
 export async function POST(request: NextRequest) {
     const { articleID } = await request.json()
     try {
-        const articles = await fetch("https://v1.nocodeapi.com/merto/medium/ovXkyrxIBtWcjGkC", {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+        const targetArticle = await prisma.articles.findUnique({
+            where:{
+                id:articleID
+            }
         })
-        const res = await articles.json()
-        const targetArticle = res.find((el:ArticleType) => el.published === Number(articleID))
         return new Response(JSON.stringify(targetArticle), {
             status: 200,
             headers: { 'Content-Type': 'application/json' },

@@ -2,10 +2,10 @@ import Image from "next/image";
 import React, { FC } from "react";
 import { Github } from "../Icons/Github";
 import Link from "next/link";
-import { ProjectType } from "@/types/ProjectType";
+import { Projects } from "@prisma/client";
 
 interface CardProps {
-  project: ProjectType;
+  project: Projects;
 }
 
 const Card: FC<CardProps> = ({ project }) => {
@@ -25,7 +25,7 @@ const Card: FC<CardProps> = ({ project }) => {
       <div className="flex flex-col gap-4 justify-between min-h-40">
         <div>
           <div className="flex flex-wrap gap-4 min-h-[4.5rem]">
-            {project.techStack.map((el, _i) => (
+            {project.techStack.split(',').map((el, _i) => (
               <p key={_i} className="text-sm h-max font-bold font-urbanist w-max bg-blue-800/60 dark:bg-slate-400/30 px-2 py-1 rounded-sm">
                 {el}
               </p>

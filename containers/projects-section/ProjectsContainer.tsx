@@ -1,5 +1,5 @@
 import Card from '@/components/Card/ProjectCard';
-import { ProjectType } from '@/types/ProjectType';
+import { Projects } from '@prisma/client';
 import axios from 'axios';
 import React, { FC } from 'react'
 
@@ -19,7 +19,7 @@ type ProjectsContainerProps = {
 }
 
 const ProjectsContainer: FC<ProjectsContainerProps> = async({ filter }) => {
-    const projects: ProjectType[] = await getProjects(filter);
+    const projects: Projects[] = await getProjects(filter);
   const projectsArray = [...projects].reverse()
     return (
         <>

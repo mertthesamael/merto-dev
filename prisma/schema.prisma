@@ -1,21 +1,30 @@
 datasource db {
-
-   provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
 }
+
 
 model Projects {
   id       Int    @id @default(autoincrement())
   name     String 
   img      String
-  techStack    String[]
+  techStack    String
   productLink String
   repoLink String
   type String
   description String
+}
+
+
+model Articles{
+   id       Int    @id @default(autoincrement())
+   title String
+   link String
+   source String
+   category String
 }
