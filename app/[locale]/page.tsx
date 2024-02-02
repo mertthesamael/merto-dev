@@ -4,6 +4,7 @@ import InfoSection from "@/containers/info-section";
 import ProjectsSection from "@/containers/projects-section";
 import { getTranslator } from "next-intl/server";
 
+export const runtime = 'edge'
 
 export default async function Home({
   params: { locale },
