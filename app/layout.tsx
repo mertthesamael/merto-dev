@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode;
 };
 export const metadata: Metadata = {
-  title: 'Mert Enercan 🎄',
+  title: 'Mert Enercan ',
   description: 'Fullstack Web Developer | NextJS | Mert Enercan',
   openGraph: {
     images: ['https://user-images.githubusercontent.com/79616834/274821212-dd04cf5b-bc3f-453b-9561-d1063791674b.png'],

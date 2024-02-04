@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import { Github } from "../Icons/Github";
 import Link from "next/link";
 import { Projects } from "@prisma/client";
+import Badge from "../Badge";
 
 interface CardProps {
   project: Projects;
@@ -10,7 +11,7 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ project }) => {
   return (
-    <div className="p-4 h-max  bg-slate-100 dark:bg-black dark:hover:bg-zinc-900 rounded-xl  hover:bg-slate-300 transition-all duration-500 ease-out flex flex-col gap-6 w-full md:w-80">
+    <div className="p-4 h-max  dark:hover:bg-zinc-900 rounded-xl  hover:bg-[#e6e6e6]  transition-all duration-500 ease-out flex flex-col gap-6 w-full md:w-80">
       <div className="w-full relative h-52 shadow-lg shadow-slate-00 dark:shadow-black rounded-xl overflow-hidden">
         <Link href={project.productLink} target="_blank">
           <Image
@@ -26,9 +27,7 @@ const Card: FC<CardProps> = ({ project }) => {
         <div>
           <div className="flex flex-wrap gap-4 min-h-[4.5rem]">
             {project.techStack.split(',').map((el, _i) => (
-              <p key={_i} className="text-sm h-max font-bold font-urbanist w-max bg-blue-800/60 dark:bg-slate-400/30 px-2 py-1 rounded-sm">
-                {el}
-              </p>
+              <Badge key={_i} text={el} />
             ))}
           </div>
           <h2 className="text-xl font-söhne text-black dark:text-white font-bold leading-10">

@@ -7,10 +7,9 @@ import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from '../theme-provider'
 import { Analytics } from '@vercel/analytics/react';
-import DonateSection from '@/containers/donate-section'
 
 export const metadata: Metadata = {
-  title: 'Mert Enercan 🎄',
+  title: 'Mert Enercan ',
   description: 'Fullstack Web Developer | NextJS | Mert Enercan',
   openGraph: {
     images: ['https://user-images.githubusercontent.com/79616834/274821212-dd04cf5b-bc3f-453b-9561-d1063791674b.png'],
@@ -31,7 +30,7 @@ export default function LocaleLayout({
   if (!isValidLocale) notFound();
   return (
     <html lang={locale}>
-      <body className={`${söhne.variable} ${urbanist.variable} ${poppins.variable} bg-slate-100 dark:bg-black transition-all duration-200`}>
+      <body className={`${söhne.variable} ${urbanist.variable} ${poppins.variable} bg-[#F3F3F3] dark:bg-black transition-all duration-200`}>
         <ThemeProvider attribute="class"
           defaultTheme="light"
         >
