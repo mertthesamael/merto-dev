@@ -1,4 +1,4 @@
-import { prisma } from "@/libs/db";
+import  prisma  from "@/libs/db";
 
 export const dynamic = "force-dynamic"
 export async function GET() {
