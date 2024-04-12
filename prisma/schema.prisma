@@ -8,7 +8,16 @@ generator client {
   previewFeatures = ["driverAdapters"]
 }
 
+model Experience{
+  id       Int    @id @default(autoincrement())
+  companyName     String 
+  role     String 
+  description String
+  img String
+  projectLink String
+  projectYear String
 
+}
 model Projects {
   id       Int    @id @default(autoincrement())
   name     String 

@@ -25,6 +25,19 @@ const withNextIntl = require('next-intl/plugin')(
             protocol: "https",
             hostname: "camo.githubusercontent.com"
           },
+          {
+            protocol: "https",
+            hostname: "static.tildacdn.com"
+          },
+          {
+            protocol: "https",
+            hostname: "res.cloudinary.com"
+          },
+          {
+            protocol: "https",
+            hostname: "mediashotz.co.uk"
+          },
+         
         ],
       }
     // Other Next.js configuration ...
