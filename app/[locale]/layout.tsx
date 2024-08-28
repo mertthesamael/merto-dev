@@ -8,7 +8,6 @@ import { notFound } from 'next/navigation';
 import { ThemeProvider } from '../theme-provider'
 import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script'
-import Head from 'next/document'
 
 export const metadata: Metadata = {
   title: 'Mert Enercan ',
