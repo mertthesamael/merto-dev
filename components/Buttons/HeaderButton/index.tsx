@@ -3,9 +3,7 @@ import Link from "next-intl/link";
 import { useTheme } from "next-themes";
 import { usePathname, useRouter, useSelectedLayoutSegment } from "next/navigation";
 import React, { FC } from "react";
-import {
-  GoogleReCaptcha
-} from 'react-google-recaptcha-v3';
+
 interface HeaderButtonProps {
   variant: "language" | "donate" | "theme" | "calendar";
   lang: string;
