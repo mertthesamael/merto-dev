@@ -9,7 +9,7 @@ import { ThemeProvider } from '../theme-provider'
 import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
-
+import Providers from './providers'
 export const metadata: Metadata = {
   title: 'Mert Enercan ',
   description: 'Fullstack Web Developer | NextJS | Mert Enercan',
@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
       </head>
       <body className={`${söhne.variable} ${urbanist.variable} ${poppins.variable} bg-[#F3F3F3] dark:bg-black transition-all duration-200`}>
-        <GoogleReCaptchaProvider reCaptchaKey='6LdoEzsqAAAAAOoGg-teRZWrDzwMumWd6VpUGCsc'>
+        <Providers>
       <noscript><iframe src="https://hardalgtm.merto.dev/ns.html?id=GTM-PTPQ2C7Z"
 height="0" width="0" style={{"display":"none","visibility":"hidden"}}></iframe></noscript>
         <ThemeProvider attribute="class"
@@ -75,7 +75,7 @@ height="0" width="0" style={{"display":"none","visibility":"hidden"}}></iframe><
         <noscript><img height="1" width="1" style={{ "display": "none" }}
           src="https://www.facebook.com/tr?id=1027652965507750&ev=PageView&noscript=1"
           /></noscript>
-          </GoogleReCaptchaProvider>
+      </Providers>
       </body>
       <Analytics />
     </html>
