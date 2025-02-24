@@ -39,7 +39,16 @@ const withNextIntl = require('next-intl/plugin')(
           },
          
         ],
-      }
+      },
+      async redirects() {
+        return [
+          {
+            source: '/metrics',
+            destination: 'https://cm7iv1h96000boksuq55in23s-signal.usehardal.com/metrics',
+            permanent: true,
+          },
+        ]
+      },
     // Other Next.js configuration ...
   });
 
