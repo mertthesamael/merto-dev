@@ -43,6 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           `
           }
         </Script>
+        <Script src="https://signal.merto.dev/hardal" data-website-id="cmbqikkok0001xxoyhmoa0ls5" data-host-url="https://signal.merto.dev" data-auto-track="true"/>
       </head>
       <body className={`${söhne.variable} ${urbanist.variable} ${poppins.variable} bg-[#F3F3F3] dark:bg-black transition-all duration-200`}>
       <noscript><iframe src="https://hardalgtm.merto.dev/ns.html?id=GTM-PTPQ2C7Z"
